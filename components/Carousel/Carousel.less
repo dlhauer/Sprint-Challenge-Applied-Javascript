@@ -1,6 +1,7 @@
 .carousel {
   .width-100();
   .flex(center, center);
+  border: 5px solid red;
   height: 500px;
   position: relative;
   overflow: hidden;
@@ -36,6 +37,11 @@
   }
   img {
     .width-100();
-    // display: none;
+    display: none;
+    // border: 5px solid red;
+
+    &:first-of-type {
+      display: block;
+    }
   }
 }

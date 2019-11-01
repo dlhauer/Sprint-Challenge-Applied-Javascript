@@ -42,7 +42,22 @@ function createCarousel(imgSrcs){
   imgs.forEach( (element, i) => {
     element.src = imgSrcs[i];
   })
-  console.log(carousel);
+
+  // leftBtn.addEventListener('click', prevImg);
+  rightBtn.addEventListener('click', nextImg);
+
+  function nextImg() {
+    let currImgIndex;
+    imgs.forEach( (item, index) => {
+      if (item.style.display === 'block') {
+        currImgIndex = index;
+      };
+    });
+    console.log(currImgIndex); // PICK UP HERE! 
+    // imgs[currImgIndex].style.display = 'none';
+    // imgs[currImgIndex + 1].style.display = 'block';
+  }
+
   return carousel;
 };
 
