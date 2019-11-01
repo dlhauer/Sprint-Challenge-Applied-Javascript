@@ -258,7 +258,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  border: 5px solid red;
   height: 500px;
   position: relative;
   overflow: hidden;
@@ -302,8 +301,4 @@ body {
 }
 .carousel img {
   width: 100%;
-  display: none;
-}
-.carousel img:first-of-type {
-  display: block;
 }

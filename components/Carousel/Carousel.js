@@ -41,6 +41,12 @@ function createCarousel(imgSrcs){
 
   imgs.forEach( (element, i) => {
     element.src = imgSrcs[i];
+    if (i === 0) {
+      element.style.display = 'block';
+    }
+    else {
+      element.style.display = 'none';
+    }
   })
 
   // leftBtn.addEventListener('click', prevImg);
@@ -54,8 +60,8 @@ function createCarousel(imgSrcs){
       };
     });
     console.log(currImgIndex); // PICK UP HERE! 
-    // imgs[currImgIndex].style.display = 'none';
-    // imgs[currImgIndex + 1].style.display = 'block';
+    imgs[currImgIndex].style.display = 'none';
+    imgs[currImgIndex + 1].style.display = 'block';
   }
 
   return carousel;
