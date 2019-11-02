@@ -21,8 +21,10 @@ const imgPaths = [
   "./assets/carousel/mountains.jpeg",
   "./assets/carousel/computer.jpeg",
   "./assets/carousel/trees.jpeg",
-  "./assets/carousel/turntable.jpeg"
-]
+  "./assets/carousel/turntable.jpeg",
+  "./assets/carousel/ta_hien.jpg",
+  "https://images.unsplash.com/photo-1440694997168-8ae4033554c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80"
+];
 
 function createCarousel(imgSrcs){
   const carousel = document.createElement('div');
