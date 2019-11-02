@@ -49,19 +49,33 @@ function createCarousel(imgSrcs){
     }
   })
 
-  // leftBtn.addEventListener('click', prevImg);
-  rightBtn.addEventListener('click', nextImg);
+  leftBtn.addEventListener( 'click', e => changeImg(e) );
+  rightBtn.addEventListener( 'click', e => changeImg(e) );
 
-  function nextImg() {
-    let currImgIndex;
+  function changeImg(event) {
+    let currIndex;
+    const lastIndex = imgs.length - 1;
     imgs.forEach( (item, index) => {
       if (item.style.display === 'block') {
-        currImgIndex = index;
+        currIndex = index;
       };
     });
-    console.log(currImgIndex); // PICK UP HERE! 
-    imgs[currImgIndex].style.display = 'none';
-    imgs[currImgIndex + 1].style.display = 'block';
+    imgs[currIndex].style.display = 'none';
+
+    if (event.target.className === 'right-button') {
+      if (currIndex === lastIndex) {
+        imgs[0].style.display = 'block';
+        return;
+      }
+      imgs[currIndex + 1].style.display = 'block';
+    }
+    else if (event.target.className === 'left-button') {
+      if (currIndex === 0) {
+         imgs[lastIndex].style.display = 'block'
+        return;
+      }
+      imgs[currIndex - 1].style.display = 'block';
+    }
   }
 
   return carousel;
