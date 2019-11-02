@@ -65,16 +65,18 @@ function createCarousel(imgSrcs){
     if (event.target.className === 'right-button') {
       if (currIndex === lastIndex) {
         imgs[0].style.display = 'block';
-        return;
       }
-      imgs[currIndex + 1].style.display = 'block';
+      else {
+        imgs[currIndex + 1].style.display = 'block';
+      }
     }
     else if (event.target.className === 'left-button') {
       if (currIndex === 0) {
          imgs[lastIndex].style.display = 'block'
-        return;
       }
-      imgs[currIndex - 1].style.display = 'block';
+      else {
+        imgs[currIndex - 1].style.display = 'block';
+      }
     }
   }
 
